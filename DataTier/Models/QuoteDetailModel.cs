@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataTier.Models
+{
+    public class QuoteDetailModel
+    {
+        public int ID { get; set; }
+        public ConsumerModel Consumer { get; set; }
+        public List<VehicleModel> Vehicle { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public CoverageModel Coverage { get; set; }
+    }
+}
