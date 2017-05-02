@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using QuoteWizard.Filters;
 
 namespace QuoteWizard
 {
@@ -19,6 +20,9 @@ namespace QuoteWizard
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Filters.Add(new ValidationModelFilter());
+            //config.Filters.Add(new ExceptionAttribute());
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<WebClientMVC.Models.QuoteSubsetModel>
+﻿@*@model IEnumerable<WebClientMVC.Models.QuoteSubsetModel>*@
+@model PagedList.IPagedList<WebClientMVC.Models.QuoteSubsetModel>
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Quotes";
@@ -12,31 +14,46 @@
     {
         <text>State</text>@Html.DropDownList("State", new SelectList(ViewBag.State))
         <text>Former Insurer</text>@Html.DropDownList("FormerInsurer", new SelectList(ViewBag.FormerInsurer))
+        <text>Vehicle Make</text>@Html.DropDownList("VehicleMake", new SelectList(ViewBag.VehicleMake))
         <input type="submit" value="Filter" />
 }
 </p>
 
 <table class="table">
-    <tr>
-        <th>@Html.DisplayNameFor(model => model.QuoteID)</th>
-        <th>@Html.DisplayNameFor(model => model.CustomerFirstname)</th>
-        <th>@Html.DisplayNameFor(model => model.CustomerLastname)</th>
-        <th>@Html.DisplayNameFor(model => model.CustomerState)</th>
-        <th>@Html.DisplayNameFor(model => model.FormerInsurer)</th>
-    </tr>
-
-    @foreach (var item in Model)
+    @if (ViewBag.EmptyDataset == true)
     {
         <tr>
-            <td>@Html.DisplayFor(modelItem => item.QuoteID)</td>
-            <td>@Html.DisplayFor(modelItem => item.CustomerFirstname)</td>
-            <td>@Html.DisplayFor(modelItem => item.CustomerLastname)</td>
-            <td>@Html.DisplayFor(modelItem => item.CustomerState)</td>
-            <td>@Html.DisplayFor(modelItem => item.FormerInsurer)</td>
-            <td>
-                @Html.ActionLink("QuoteDetails", "Home", new { id = item.QuoteID })
-            </td>
+            <td>No data returned.</td>
         </tr>
     }
+    else
+    {
+        <tr>
+            <th>QuoteID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>State</th>
+            <th>Former Insurer</th>
+        </tr>
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.QuoteID)</td>
+                <td>@Html.DisplayFor(modelItem => item.CustomerFirstname)</td>
+                <td>@Html.DisplayFor(modelItem => item.CustomerLastname)</td>
+                <td>@Html.DisplayFor(modelItem => item.CustomerState)</td>
+                <td>@Html.DisplayFor(modelItem => item.FormerInsurer)</td>
+                <td>
+                    @Html.ActionLink("Quote Detail", "QuoteDetail", new { id = item.QuoteID })
+                </td>
+            </tr>
+        }
+    }
+    
 
 </table>
+
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

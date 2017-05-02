@@ -16,5 +16,7 @@ namespace WebClientMVC.Models
         public string Use { get; set; }
         public int Distance { get; set; }
         public int Annual_Distance { get; set; }
+
+        public string EngineInformation { get; set; }
     }
 }

@@ -1,0 +1,111 @@
+﻿@model WebClientMVC.Models.QuoteDetailModel
+
+@{
+    ViewBag.Title = "QuoteDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quote Detail for Quote ID @Html.Label(Model.ID.ToString())</h2>
+
+<table class="table">
+    <tr><th>Consumer</th></tr>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>County</th>
+        <th>Currently At Address/th>
+        <th>Years At Address</th>
+        <th>Area Code</th>
+        <th>Primary Phone</th>
+        <th>Secondary Phone</th>
+        <th>Email</th>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayFor(model => model.Consumer.First_Name)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Last_Name)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Age)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Address)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Address2)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.City)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.State)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Zip_Code)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.County)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Is_Currently_At_Address)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Years_At_Address)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Area_Code)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Primary_Phone)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Secondary_Phone)</td>
+        <td>@Html.DisplayFor(model => model.Consumer.Email)</td>
+    </tr>
+
+</table>
+
+
+<table class="table">
+    <tr><th>Coverage</th></tr>
+    <tr>
+        <th>Months Insured</th>
+        <th>Has Coverage</th>
+        <th>Type</th>
+        <th>BodilyInjury_Person</th>
+        <th>BodilyInjury_Accident</th>
+        <th>Deductible</th>
+        <th>PropertyDamage</th>
+        <th>ExpirationDate</th>
+        <th>Expiration Days Remaining</th>
+        <th>DtgExpirationDate</th>
+        <th>Former_Insurer</th>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayFor(model => model.Coverage.Months_Insured)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Has_Coverage)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Type)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.BodilyInjury_Person)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.BodilyInjury_Accident)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Deductible)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.PropertyDamage)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Expiration_Date)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Expiration_Days_Remaining)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.DtgExpirationDate)</td>
+        <td>@Html.DisplayFor(model => model.Coverage.Former_Insurer)</td>
+    </tr>
+
+</table>
+
+
+<table class="table">
+    <tr><th>Vehicles</th></tr>
+    <tr>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>EngineInformation</th>
+        <th>Days Used</th>
+        <th>Use</th>
+        <th>Distance</th>
+        <th>Annual Distance</th>
+    </tr>
+
+    @foreach (var item in Model.Vehicle)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Year)</td>
+            <td>@Html.DisplayFor(modelItem => item.Make)</td>
+            <td>@Html.DisplayFor(modelItem => item.Model)</td>
+            <td>@Html.DisplayFor(modelItem => item.EngineInformation)</td>
+            <td>@Html.DisplayFor(modelItem => item.Days_Used)</td>
+            <td>@Html.DisplayFor(modelItem => item.Use)</td>
+            <td>@Html.DisplayFor(modelItem => item.Distance)</td>
+            <td>@Html.DisplayFor(modelItem => item.Annual_Distance)</td>
+        </tr>
+    }
+
+</table>

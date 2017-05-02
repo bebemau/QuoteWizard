@@ -1,0 +1,8 @@
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\CommonUtilities.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\CommonUtilities.pdb
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\NLog.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\bin\Debug\NLog.xml
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\obj\Debug\CommonUtilities.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\CommonUtilities\obj\Debug\CommonUtilities.pdb

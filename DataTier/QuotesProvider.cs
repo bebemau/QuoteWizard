@@ -1,59 +1,61 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
-using System.Configuration;
 using DataTier.Models;
 using Newtonsoft.Json;
+using CommonUtilities;
 
 namespace DataTier
 {
-    public class QuotesProvider
+    public class QuotesProvider : IQuotesProvider
     {
+        private ConfigurationHelper _configurationHelper = new ConfigurationHelper();
 
         public List<QuoteDetailModel> GetData()
         {
-            var config = ConfigurationSettings.AppSettings["PathToJsonFile"];
+            var config = _configurationHelper.Get<string>("PathToJsonFile");
             var path = HttpContext.Current.Server.MapPath(@config);
 
-            //var serializer = new JsonSerializer();
-            //var obj = serializer.Deserialize<QuoteModel>(File.ReadAllText(@".\path\to\json\config\file.json");
-
-            using (StreamReader file = File.OpenText(@path))
+            try
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.NullValueHandling = NullValueHandling.Ignore;
-                var dataset = (List<QuoteDetailModel>)serializer.Deserialize(file, typeof(List<QuoteDetailModel>));
-                return dataset;
+                using (StreamReader file = File.OpenText(@path))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.NullValueHandling = NullValueHandling.Ignore;
+                    var dataset = (List<QuoteDetailModel>)serializer.Deserialize(file, typeof(List<QuoteDetailModel>));
+                    return dataset;
+                }
             }
-
-
-            //var dataset = JArray.Parse(File.ReadAllText(path));
-            //return dataset.ToObject<List<QuoteModel>>();
+            catch(Exception ex)
+            {
+                ErrorLogger.LogError(ex, "QuotesProvider.GetData");
+                throw;
+            }
         }
 
-        public List<QuoteSubsetModel> GetQuoteSubset(string state="", string vehicleMake="", string formerInsurer="")
+        public List<QuoteSubsetModel> GetQuoteSubset(string state = "", string vehicleMake = "", string formerInsurer = "")
         {
             var result = new List<QuoteSubsetModel>();
 
             var quoteDetailList = GetData();
 
-            result = quoteDetailList.Select(m => new QuoteSubsetModel
+            if (quoteDetailList.Count > 0)
             {
-                CustomerFirstname = m.Consumer.First_Name,
-                CustomerLastname = m.Consumer.Last_Name,
-                FormerInsurer = m.Coverage.Former_Insurer,
-                CustomerState = m.Consumer.State,
-                QuoteID = m.ID,
-                Vehicles = m.Vehicle.Where(k => k.Make.ToLower() == (vehicleMake != string.Empty ? vehicleMake.ToLower() : k.Make.ToLower())).ToList()
-            }).Where(k => k.FormerInsurer.ToLower() == (formerInsurer != string.Empty ? formerInsurer.ToLower() : k.FormerInsurer.ToLower())
-            && k.CustomerState.ToLower() == (state != string.Empty ? state.ToLower() : k.CustomerState.ToLower())
-            && k.Vehicles.Any(h => h.Make.ToLower() == (vehicleMake != string.Empty ? vehicleMake.ToLower() : h.Make.ToLower()))
-            ).ToList();
+                result = quoteDetailList.Select(m => new QuoteSubsetModel
+                {
+                    CustomerFirstname = m.Consumer.First_Name,
+                    CustomerLastname = m.Consumer.Last_Name,
+                    FormerInsurer = m.Coverage.Former_Insurer,
+                    CustomerState = m.Consumer.State,
+                    QuoteID = m.ID,
+                    Vehicles = m.Vehicle.Where(k => k.Make.ToLower() == (vehicleMake != string.Empty ? vehicleMake.ToLower() : k.Make.ToLower())).ToList()
+                }).Where(k => k.FormerInsurer.ToLower() == (formerInsurer != string.Empty ? formerInsurer.ToLower() : k.FormerInsurer.ToLower())
+                && k.CustomerState.ToLower() == (state != string.Empty ? state.ToLower() : k.CustomerState.ToLower())
+                && k.Vehicles.Any(h => h.Make.ToLower() == (vehicleMake != string.Empty ? vehicleMake.ToLower() : h.Make.ToLower()))
+                ).ToList();
+            }
 
             return result;
         }
@@ -62,7 +64,12 @@ namespace DataTier
         {
             var result = new QuoteDetailModel();
 
-            result = GetData().Where(a => a.ID == quoteID).FirstOrDefault();
+            var allQuotes = GetData();
+            
+            if(allQuotes.Count > 0)
+            {
+                result =allQuotes.Where(a => a.ID == quoteID).FirstOrDefault();
+            }
 
             return result;
         }

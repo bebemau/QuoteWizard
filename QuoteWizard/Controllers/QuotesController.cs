@@ -5,13 +5,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DataTier.Models;
+using DataTier;
+using QuoteWizard.Filters;
 
 namespace QuoteWizard.Controllers
 {
     [RoutePrefix("api/Quotes")]
     public class QuotesController : ApiController
     {
-        private DataTier.QuotesProvider _dataProvider = new DataTier.QuotesProvider();
+        private readonly IQuotesProvider _dataProvider;
+
+        public QuotesController(IQuotesProvider quotesProvider)
+        {
+            _dataProvider = quotesProvider;
+        }
 
         [HttpGet]
         [Route("GetQuotesSubset")]

@@ -1,0 +1,11 @@
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\DataTier.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\DataTier.pdb
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\CommonUtilities.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\NLog.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\CommonUtilities.pdb
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\bin\Debug\NLog.xml
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\obj\Debug\DataTier.csprojResolveAssemblyReference.cache
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\obj\Debug\DataTier.dll
+C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\DataTier\obj\Debug\DataTier.pdb

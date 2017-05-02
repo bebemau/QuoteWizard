@@ -5,12 +5,19 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DataTier.Models;
+using DataTier;
+using QuoteWizard.Filters;
 
 namespace QuoteWizard.Controllers
 {
     public class VehiclesController : ApiController
     {
-        private DataTier.QuotesProvider _dataProvider = new DataTier.QuotesProvider();
+        private readonly IQuotesProvider _dataProvider;
+
+        public VehiclesController(IQuotesProvider quotesProvider)
+        {
+            _dataProvider = quotesProvider;
+        }
 
         [HttpGet]
         public List<string> Get()
