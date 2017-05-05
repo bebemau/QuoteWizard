@@ -17,13 +17,6 @@ C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\WebCl
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\WebClientMVC.pdb
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Antlr3.Runtime.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\CommonUtilities.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.Web.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.ApplicationInsights.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Newtonsoft.Json.dll
@@ -44,11 +37,6 @@ C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Syste
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\WebActivator.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\WebGrease.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\CommonUtilities.pdb
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.Web.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.ApplicationInsights.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\Newtonsoft.Json.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\WebClientMVC\bin\NLog.xml

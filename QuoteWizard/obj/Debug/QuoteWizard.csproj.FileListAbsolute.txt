@@ -18,13 +18,6 @@ C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\QuoteW
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Antlr3.Runtime.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\CommonUtilities.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\DataTier.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.Web.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.ApplicationInsights.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Newtonsoft.Json.dll
@@ -49,11 +42,6 @@ C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\WebAct
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\WebGrease.dll
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\CommonUtilities.pdb
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\DataTier.pdb
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.Web.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.ApplicationInsights.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\Newtonsoft.Json.xml
 C:\Users\bebem\OneDrive\Documents\Development\QuoteWizard\QuoteWizard\bin\NLog.xml
